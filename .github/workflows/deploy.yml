@@ -33,4 +33,5 @@ jobs:
           keep_files: false
 
       - name: Check PERSONAL_TOKEN existence
-        run: echo "Token length: ${{ secrets.PERSONAL_TOKEN && secrets.PERSONAL_TOKEN.length || 0 }}"
+        run: echo 'PERSONAL_TOKEN exists'
+        if: ${{ secrets.PERSONAL_TOKEN != '' }}
