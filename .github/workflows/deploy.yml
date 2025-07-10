@@ -31,7 +31,3 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: docs/.vitepress/dist
           keep_files: false
-
-      - name: Check PERSONAL_TOKEN existence
-        if: secrets.PERSONAL_TOKEN
-        run: echo 'PERSONAL_TOKEN exists'
