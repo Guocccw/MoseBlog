@@ -10,28 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Build VitePress
-        run: npm run docs:build
+    - name: Build VitePress
+      run: npm run docs:build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: docs/.vitepress/dist
-          keep_files: false
-
-      - name: Check PERSONAL_TOKEN existence
-        run: echo "Token length: ${{ secrets.PERSONAL_TOKEN && secrets.PERSONAL_TOKEN.length || 0 }}"
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        publish_dir: docs/.vitepress/dist
+        keep_files: false
