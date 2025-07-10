@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "MoseBlog"
   text: "A VitePress Site"
-  tagline: MMMMMMMMMMMMMMMMMose
+  tagline: My great project tagline
   actions:
     - theme: brand
       text: Markdown Examples
