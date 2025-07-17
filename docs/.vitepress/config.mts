@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-
+import sidebar from "./sidebar.json";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	base: "/MoseBlog/",
@@ -7,27 +7,9 @@ export default defineConfig({
 	description: "A VitePress Site",
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
-		nav: [{ text: "Home", link: "/" }],
-
-		sidebar: [
-			{
-				text: "Examples",
-				items: [{ text: "Markdown Examples", link: "/markdown-examples" }],
-			},
-			{
-				text: "daily",
-				items: [
-					{
-						text: "2025-07",
-						items: [
-							{ text: "2025-07-10", link: "/daily/2025-07/2025-07-10" },
-							{ text: "2025-07-16", link: "/daily/2025-07/2025-07-16" },
-						],
-					},
-				],
-			},
-		],
-
-		socialLinks: [{ icon: "github", link: "https://github.com/vuejs/vitepress" }],
+		nav: [{ text: "日记", link: "/daily/" }],
+		sidebar: {
+			"/daily/": sidebar,
+		},
 	},
 });

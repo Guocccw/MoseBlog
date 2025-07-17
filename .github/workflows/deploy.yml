@@ -22,8 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - run: node scripts/genSidebar.js
+
       - name: Build VitePress
-        run: npm run docs:build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

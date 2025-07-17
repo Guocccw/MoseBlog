@@ -8,8 +8,8 @@ hero:
   tagline: 嘿嘿嘿嘿
   actions:
     - theme: brand
-      # text: Markdown Examples
-      # link: /markdown-examples
+      text: 日记
+      link: /daily/
 
 # features:
 #   - title: Feature A

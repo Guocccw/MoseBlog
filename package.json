@@ -1,11 +1,13 @@
 {
 	"devDependencies": {
+		"@types/node": "^24.0.14",
 		"gh-pages": "^6.3.0",
 		"vitepress": "^1.6.3"
 	},
 	"scripts": {
-		"docs:dev": "vitepress dev docs",
-		"docs:build": "vitepress build docs",
+		"gen": "node scripts/genSidebar.js",
+		"dev": "npm run gen && vitepress dev docs",
+		"build": "npm run gen && vitepress build docs",
 		"docs:preview": "vitepress preview docs",
 		"docs:deploy": "vitepress build docs && gh-pages -d docs/.vitepress/dist"
 	},
