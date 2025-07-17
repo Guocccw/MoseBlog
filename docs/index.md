@@ -4,12 +4,12 @@ layout: home
 
 hero:
   name: "MoseBlog"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: "一个人个人日记站"
+  tagline: 嘿嘿嘿嘿
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      # text: Markdown Examples
+      # link: /markdown-examples
 
 # features:
 #   - title: Feature A

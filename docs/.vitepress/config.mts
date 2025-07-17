@@ -21,7 +21,7 @@ export default defineConfig({
 						text: "2025-07",
 						items: [
 							{ text: "2025-07-10", link: "/daily/2025-07/2025-07-10" },
-							{ text: "2025-07-11", link: "/daily/2025-07/2025-07-11" },
+							{ text: "2025-07-16", link: "/daily/2025-07/2025-07-16" },
 						],
 					},
 				],
